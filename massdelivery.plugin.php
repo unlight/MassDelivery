@@ -77,6 +77,7 @@ class MassDeliveryPlugin extends Gdn_Plugin {
 			$UserID = GetValueR('User.UserID', $Session);
 			$User = $UserModel->Get($UserID);
 			$Result[$User->Email] = $User->Name;
+			return $Result;
 		}
 		$Roles = ArrayValue('Roles', $FormValues);
 		if (is_array($Roles) && count($Roles) > 0) {
